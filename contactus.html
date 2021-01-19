@@ -94,22 +94,30 @@
                     <div class="row">
                         <label for="areaCode">Contact Tel.</label> 
                         <input type="tel" id="areaCode" name="areaCode" placeholder="Area Code">
+                        <input type="tel" name="telNum" placeholder="Tel. number">
                     </div>
 
-                    <input type="tel" name="telNum" placeholder="Tel. number">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email"name="email" placeholder="Email"> May we contact you?
+                    <div class="row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email"name="email" placeholder="Email">
+                    </div>
                     
-                    <input type="radio" id="contactYes" name="contactRadios" value="yes"> 
-                    <label for="contactYes"> Yes</label>
-
-                    <input type="radio" id="contactNo" name="contactRadios" value="no">
-                    <label for="contactNo"> No</label> 
-
-                    <label for="feedback">Your Feedback</label>
-                    <textarea id="feedback" name="feedback" rows="8"></textarea>
-                    <button type="submit">Send Feedback</button>
+                    <div class="row">
+                        May we contact you?
+                        <input type="radio" id="contactYes" name="contactRadios" value="yes"> 
+                        <label for="contactYes"> Yes</label>
+                        <input type="radio" id="contactNo" name="contactRadios" value="no">
+                        <label for="contactNo"> No</label> 
+                    </div>
+                    
+                    <div class="row">
+                        <label for="feedback">Your Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="8"></textarea>
+                    </div>
+                    
+                    <div class="row">
+                        <button type="submit">Send Feedback</button>
+                    </div>
                 </form>
 
             </div>
