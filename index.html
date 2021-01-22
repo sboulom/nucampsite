@@ -18,7 +18,7 @@
     </head>
 
 <body>
-
+    <!-- Jumbotron -->
     <header class="jumbotron jumbotron-fluid">
         <div class = "container">
             <div class="row">
@@ -28,11 +28,14 @@
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
-                </div>   
+                </div> 
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a class="text-nowrap" href=""><button class="btn btn-info btn-lg">Reserve Campsite</button></a>
+                </div>  
             </div>
         </div>
     </header>
-
+    <!-- Navbar-->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
@@ -49,7 +52,7 @@
             </div>
         </div>     
     </nav>
-
+    <!--Main Section-->
     <div class="container">
         <div class = "row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -68,11 +71,16 @@
 
         <div class = "row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
-                <h2>Featured Campsites</h2>
+                <h2 class="text-sm-left">Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img class="d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake Campground">
+                </div>
             </div>
         </div>
 
@@ -88,8 +96,47 @@
                 </div>
             </div>
         </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-6 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <div class="form" id="reserveForm">
+                            <div class="row">
+                                <label class="col-sm-6">Number of Campers</label>
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers">
+                                        <option value="">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-6" for="date">Date</label>
+                                <div class="col">
+                                    <input type="date" id="date" name="date" placeholder="date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>   
 
+    <!--Footer-->
     <footer class="site-footer">
         <div class="container">
             <div class="row">
