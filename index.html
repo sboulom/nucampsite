@@ -30,7 +30,9 @@
                     <h2>a better way to camp</h2>
                 </div> 
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a class="text-nowrap" href=""><button class="btn btn-info btn-lg">Reserve Campsite</button></a>
+                    <!-- used tooltip  -->
+                    <!-- wanted to bold the phone number so you have to add data-html to true-->
+                    <a class="text-nowrap" href=""><button class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</button></a>
                 </div>  
             </div>
         </div>
@@ -49,9 +51,22 @@
                     <li class="nav-item"><a class="nav-link" href="#"> Sites <i class="fa fa-list fa-lg"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"> Contact <i class="fa fa-address-card fa-lg"></i></a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in">Login</i>
+                    </a>
+                </span>
             </div>
         </div>     
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"></div>
+            </div>
+        </div>
+    </div>
     <!--Main Section-->
     <div class="container">
         <div class = "row row-content align-items-center">
@@ -166,8 +181,14 @@
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <!-- library that is required for popovers tool tips and most dropdown menus in bootstrap -->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 </body>
 
