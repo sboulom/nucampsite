@@ -1,28 +1,38 @@
+$color-primary: #3046c5;
+$color-secondary: #5637dd;
+$color-pale: #CEC8ff;
+$color-mid: #901CAD;
+$color-dark: #60106b;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font;
 }
 
 h1, h2, h3 {
-    font-family: "Lobster", cursive;
+    font-family: $header-font;
 }
 
 h2 {
-    color: #3046c5;
+    color: $color-primary;
 }
 
 header h2 {
-    color: #CEC8FF;
+    color: $color-pale;
 }
 
 .site-footer {
-    background-image: linear-gradient(#cec8ff, white);
+    background-image: linear-gradient($color-pale, white);
     padding: 20px 0;
 
 }
 
 .jumbotron {
     padding: 30px; 
-    background-image: linear-gradient(to right, #5637DD, #3046c5, #601068);
+    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
     color: white;
     margin: 0;
 }
@@ -34,7 +44,7 @@ header h2 {
 }
 
 .navbar {
-    background-color: #901CAD;
+    background-color: $color-mid;
     
 }
 
@@ -50,11 +60,11 @@ a, a:hover {
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $color-black-transparent;
 
 }
 .carousel {
-    border: solid #5637DD
+    border: solid $color-secondary
 }
 
 #carouselButton {
