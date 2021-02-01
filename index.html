@@ -159,7 +159,7 @@
             </div>
         </div>
     </div>
-    
+
     <!--Main Section-->
     <div class="container">
         <div class="row row-content">
@@ -200,6 +200,14 @@
                             <span class="carousel-control-next-icon"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                        <div class="btn-group" id="carouselButton">
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa fa-pause" id="carouselPause"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa fa-play" id="carouselPlay"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,7 +292,17 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script> -->
-
+    <script>
+        $(function(){
+            $(".carousel").carousel({ interval: 2000});
+            $("#carousel").click(function(){
+                $(".carousel").carousel("pause")
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel("cycle");
+            });
+        })
+    </script>
 </body>
 
 </html>
