@@ -11,4 +11,4 @@ $(function(){
             $("#carouselButton").children("i").addClass("fa-pause");
         }
     });
-});
+});    
