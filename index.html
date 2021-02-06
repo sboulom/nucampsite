@@ -29,17 +29,16 @@
                     <h2>a better way to camp</h2>
                 </div> 
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a class="text-nowrap"><button type="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-info btn-lg"></strong>Reserve Campsite</button></a>
-                    
+                    <a class="text-nowrap"><button type="button" id="reserveButton" class="btn btn-info btn-lg"></strong>Reserve Campsite</button></a>
                 </div>  
-            </div>
+            </div>  
         </div>
     </header>
             <!-- Reservation Modal -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">Reserve a Campsite</h3>
                     <!-- the data class close and the &times; show and "X" to close the modal-->
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -109,7 +108,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"> Contact <i class="fa fa-address-card fa-lg"></i></a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <i class="fa fa-sign-in">Login</i>
                     </a>
                 </span>
