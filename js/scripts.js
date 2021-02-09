@@ -27,28 +27,27 @@ console.log(getInitials("Charlie", "Brown")); // this should console.log "CB"
 
 
 /****************************** Challenge 2 ******************************/
-// function getStudentGrade(finalExamPoints, assignmentsPoints) {
-//   const percent = ((finalExamPoints + assignmentsPoints) / 300) * 100; 
-//   let grade = "Unknown";
-//   if (percent >= 90) {
-//     grade = "A";
-//   }
-//   else if (percent >= 80) {
-//     grade =  "B";
-//   } 
-//   else if (percent >= 70) {
-//     grade =  "C";
-//   } 
-//   else if (percent >= 60) {
-//     grade =  "D";
-//   } 
-//   else (percent < 60) {
-//     grade =  "F";
-
-//   }
-//   return grade;
-// }
-// console.log(getStudentGrade(70, 180)); // this should console.log "B"
+function getStudentGrade(finalExamPoints, assignmentsPoints) {
+  const percent = ((finalExamPoints + assignmentsPoints) / 300) * 100; 
+  let grade = "Unknown";
+  if (percent >= 90) {
+    grade = "A";
+  }
+  else if (percent >= 80) {
+    grade =  "B";
+  } 
+  else if (percent >= 70) {
+    grade =  "C";
+  } 
+  else if (percent >= 60) {
+    grade =  "D";
+  } 
+  else {
+    grade =  "F";
+  }
+  return grade;
+}
+console.log(getStudentGrade(70, 180)); // this should console.log "B"
 
 
 /****************************** Challenge 3 ******************************/
@@ -95,11 +94,13 @@ console.log("5 is " + word); // This should console.log "5 is five"
 /****************************** Challenge 4 ******************************/
 function hasTreat(treat) {
   const treatsArr = ['cookie', 'cake', 'muffin', 'pie', 'ice cream'];
-  if (treatsArr.indexOf('cookie') === true) {
+  if (treatsArr.indexOf('cookie') >= 0) {
     return true;
+  } else { 
+    return false;
   }
-  return false;
 }
+
 if (hasTreat('cookie')) { // You should have a cookie. 
   console.log("You have a cookie!");
 } else {
@@ -109,8 +110,10 @@ if (hasTreat('cookie')) { // You should have a cookie.
 
 /****************************** Challenge 5 ******************************/
 const randomValue = (min, max) => { 
-  const val = Math.random() * (max - min) + min;
-  return;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  
+  return Math.floor(Math.random() * (max-min) +min)
 };
 console.log(randomValue(2,6)) // should return a random numeric value between 2 and 6. 
 // For an explanation of Math.random, see: 
